@@ -6,6 +6,7 @@ subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requiremen
 
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 from sklearn.metrics import accuracy_score, make_scorer
 
 # Constant
@@ -25,6 +26,67 @@ REASON_DICT = {1:'1 - Treatment Completed',
                5:'5 - Incarcerated',
                6:'6 - Death',
                7:'7 - Other'}
+
+
+US_STATE_TO_ABBREV = {
+    "Alabama": "AL",
+    "Alaska": "AK",
+    "Arizona": "AZ",
+    "Arkansas": "AR",
+    "California": "CA",
+    "Colorado": "CO",
+    "Connecticut": "CT",
+    "Delaware": "DE",
+    "Florida": "FL",
+    "Georgia": "GA",
+    "Hawaii": "HI",
+    "Idaho": "ID",
+    "Illinois": "IL",
+    "Indiana": "IN",
+    "Iowa": "IA",
+    "Kansas": "KS",
+    "Kentucky": "KY",
+    "Louisiana": "LA",
+    "Maine": "ME",
+    "Maryland": "MD",
+    "Massachusetts": "MA",
+    "Michigan": "MI",
+    "Minnesota": "MN",
+    "Mississippi": "MS",
+    "Missouri": "MO",
+    "Montana": "MT",
+    "Nebraska": "NE",
+    "Nevada": "NV",
+    "New Hampshire": "NH",
+    "New Jersey": "NJ",
+    "New Mexico": "NM",
+    "New York": "NY",
+    "North Carolina": "NC",
+    "North Dakota": "ND",
+    "Ohio": "OH",
+    "Oklahoma": "OK",
+    "Oregon": "OR",
+    "Pennsylvania": "PA",
+    "Rhode Island": "RI",
+    "South Carolina": "SC",
+    "South Dakota": "SD",
+    "Tennessee": "TN",
+    "Texas": "TX",
+    "Utah": "UT",
+    "Vermont": "VT",
+    "Virginia": "VA",
+    "Washington": "WA",
+    "West Virginia": "WV",
+    "Wisconsin": "WI",
+    "Wyoming": "WY",
+    "District of Columbia": "DC",
+    "American Samoa": "AS",
+    "Guam": "GU",
+    "Northern Mariana Islands": "MP",
+    "Puerto Rico": "PR",
+    "United States Minor Outlying Islands": "UM",
+    "U.S. Virgin Islands": "VI",
+}
 
 def read_csv(path):
     return pd.read_csv(path)
@@ -66,7 +128,7 @@ def supervised_model(df, X, y, model, scoring_method=accuracy_score):
     score = scoring_method(y_true, y_predicted)
     return model, y_predicted, score
 
-def pca_scatter_plot(df, pc1, pc2, color):
+def pca_scatter_plot(df, pc1, pc2, color, is_static=True):
     labels={
         pc1: "Principal Component 1",
         pc2: "Principal Component 2"
@@ -77,7 +139,33 @@ def pca_scatter_plot(df, pc1, pc2, color):
                      color=df[color].astype(str), 
                      labels=labels,
                      title="2 component PCA")
-    config = {'staticPlot': True}
+    config = {'staticPlot': is_static}
 
     fig.show(config=config)
     
+    
+def bar_chart(x, y, x_label, y_label, is_static=True):
+    labels={
+        'x': x_label,
+        'y': y_label
+    }
+    config = {'staticPlot': is_static}
+    fig = px.bar(x=x, y=y, labels=labels)
+    fig.show(config=config)
+    
+def map_chart(df, z, reason, color_bar_title, title, states='ALL', is_static=True):
+    df = df[df['REASON'] == REASON_DICT[reason]]
+    if states != 'ALL':
+        df = df[df['STFIPS'].isin(states)]
+    data = go.Choropleth(
+        locations=df['STFIPS'],
+        z=df[z],
+        locationmode = 'USA-states',
+        colorscale = 'Blues',
+        colorbar_title = color_bar_title)
+    fig = go.Figure(data)
+    config = {'staticPlot': is_static}
+    fig.update_layout(
+        title_text = title,
+        geo_scope='usa')
+    fig.show(config=config)
