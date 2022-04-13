@@ -8,6 +8,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from sklearn.metrics import accuracy_score, make_scorer
+from sklearn.compose import make_column_transformer
 
 # Constant
 STATE_DICT = {1:'Alabama',2:'Alaska',4:'Arizona', 5:'Arkansas',6:'California',8:'Colorado',9:'Connecticut',
@@ -91,7 +92,7 @@ US_STATE_TO_ABBREV = {
 def read_csv(path):
     return pd.read_csv(path)
 
-def preprocess(df, features, scaler):
+def preprocess_df(df, features, scaler):
     """
     Normalize the features in the dataframe with a given scaler function.
     :param df: DataFrame
@@ -100,6 +101,22 @@ def preprocess(df, features, scaler):
     """
     df[features] = scaler.fit_transform(df[features])
     return df
+
+def preprocess(df, columns_list, scaler_list, remainder='passthrough'):
+    """
+    Normalize the features in the dataframe with a given scaler function.
+    :param df: DataFrame
+    :param features: List[List[String]]
+    :param scaler: A list of scaler functions from https://scikit-learn.org/stable/modules/classes.html#module-sklearn.preprocessing
+    """
+    if type(columns_list) != list:
+        raise Exception('columns_list must be list of list')
+    if type(scaler_list) != list:
+        raise Exception('scaler_list must be list')
+    if len(columns_list) != len(scaler_list):
+        raise Exception(f'column_list length {len(columns_list)} is different from scaler_list length {len(scaler_list)}')
+    ct = make_column_transformer(*zip(scaler_list, columns_list), remainder=remainder)
+    return ct.fit_transform(df)
 
 def unsupervised_model(df, X, model):
     """
