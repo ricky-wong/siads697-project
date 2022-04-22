@@ -18,7 +18,7 @@ STATE_DICT = {1:'Alabama',2:'Alaska',4:'Arizona', 5:'Arkansas',6:'California',8:
               30:'Montana', 31:'Nebraska', 32:'Nevada', 33:'New Hampshire', 34:'New Jersey', 35:'New Mexico', 
               36:'New York', 37:'North Carolina', 38:'North Dakota', 39:'Ohio', 40:'Oklahoma', 42:'Pennsylvania',
               44:'Rhode Island', 45:'South Carolina', 46:'South Dakota', 47:'Tennessee', 48:'Texas', 49:'Utah',
-              50:'Vermont', 51:'Virginia', 55:'Wisconsin', 56:'Wyoming', 72:'Puerto Rico'}
+              50:'Vermont', 51:'Virginia', 55:'Wisconsin', 56:'Wyoming', 72:'Puerto Rico', 53: 'Washington'}
 
 REASON_DICT = {1:'1 - Treatment Completed', 
                2:'2 - Dropped out of treatment', 
