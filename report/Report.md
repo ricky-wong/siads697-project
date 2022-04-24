@@ -1,6 +1,28 @@
-# Introduction
+# Predicting Substance Abuse Treatment Outcomes <!-- omit in toc -->
 
-## Background
+**Team Recovery**<br>
+Francis Ng `<chiwang@umich.edu>`<br>
+Nicholas Dunbar `<nkdunbar@umich.edu>`<br>
+Ricky Wong `<rckywong@umich.edu>`<br>
+Steven Wang `<stevenzw@umich.edu>`
+
+University of Michigan School of Information (UMSI)<br>
+Master of Applied Data Science (MADS)<br>
+SIADS 697 - Capstone<br>
+Winter 2022
+
+# Table of Contents <!-- omit in toc -->
+- [1. Introduction](#1-introduction)
+  - [1.1. Background](#11-background)
+  - [1.2. Motivation](#12-motivation)
+    - [1.2.1. Data Source](#121-data-source)
+    - [1.2.2. Literature Review](#122-literature-review)
+- [2. Methodology](#2-methodology)
+  - [2.1. Data Preparation](#21-data-preparation)
+  - [2.2. Data Exploration](#22-data-exploration)
+# 1. Introduction
+
+## 1.1. Background
 
 Substance abuse is a societal issue regularly in the news, but one whose prevalence throughout the country might still surprise many people. According to the National Center for Drug Abuse Statistics (2022), there have been over 700,000 drug overdose deaths in the United States since the year 2000. Nearly 32 million Americans have reported using illegal drugs within the last 30 days, a quarter of which meet substance abuse disorder criteria, and another nearly 15 million have an alcohol use disorder.
 
@@ -8,17 +30,17 @@ Billions in federal funding are used annually as part of the national drug contr
 
 Even with an increase in program funding due to the recent issues surrounding the opioid epidemic, many programs struggle to effectively fund programs while many patients find themselves requiring multiple courses of treatment before any significant sobriety can be found. To better understand the factors around substance abuse and recovery, research has recently begun to approach substance use disorders from a machine learning perspective. Some models have been able to successfully use certain data and cases with predictive accuracy, especially around physiological and behavioral measures that predict current substance use, but results are uneven due to insufficient data (Barenholtz, Fitzgerald, and Hahn, 2020). More efficient models might help researchers and clinicians to better identify the most efficient, effective treatments to focus on limited funding where it might provide the greatest benefit.
 
-## Motivation
+## 1.2. Motivation
 
 One possible solution to the issue of insufficient data could be to use data collected from SAMHSA’s data division: the Substance Abuse & Mental Health Data Archive. SAMHDA is an initiative from the Center for Behavioral Health Statistics and Quality and works to provide data sets for analysis on a large scale, with information reporting from almost every state. Our project worked specifically with SAMHDA’s Treatment Episode Data Set: Discharges (TEDS-D), whose methodology will be discussed below.
 
-### Data Source
+### 1.2.1. Data Source
 
 The TEDS-D dataset provided by SAMHDA provides information relating to each instance of substance abuse treatment in all reporting states, which includes variables such as demographic information, some patient substance use history, substance use at time of admission, service type at admission and discharge, and the reason for treatment discharge. These datasets are maintained by the CBHSQ, using state data submitted following the TEDS and Data Submission System user manuals available through SAMHSA.
 
 One major consideration of the TEDS-D data is that of confidentiality protection for subjects whose information appears. Potentially identifiable information has been top or bottom coded to prevent distinguishingly high or low values, with variables recoded into categories to minimize any level of public risk. Data swapping methods are also implemented in this set to prevent potentially identifying socio-demographic characteristics.
 
-### Literature Review
+### 1.2.2. Literature Review
 
 Before we began our early exploratory data analysis, we wanted to examine the current body of literature specifically related to SAMHSA’s TEDS-D dataset. Our main plan with the dataset was to perform a wide range of analysis across states and across categories given the scope of the set, but most of the current literature focused on more specific aspects and variables. These studies gave us a bit more direction of where to look when selecting features and identifying potentially important variables when determining treatment efficacy and outcomes.
 
@@ -28,9 +50,9 @@ Another main theme of recent literature looks at other demographic effects such 
 
 Given that the literature reviewed focused their studies on smaller subgroups of the overall TEDS-D data, we also expected the possibility of shifting focus to a smaller subgroup of the population. Even so, our exploratory analysis worked to examine the dataset as a whole to identify potential relationships ahead of any modeling.
 
-# Methodology
+# 2. Methodology
 
-## Data Preparation
+## 2.1. Data Preparation
 
 As we began examining the TEDS-D 2019 dataset, there were many considerations and potential inconsistencies we needed to keep in mind based on how the data was originally collected and processed by SAMHDA. TEDS data tries to include any admissions to providers that receive public funding, but because each state decides their own provider’s TEDS eligibility, there is no independent check for that funding source. SAMHSA requests that any publicly funded facility submits treatment data to be collected, but some states are structured in a way that only clients treated with public funds are included in TEDS data. While TEDS data may be collected for many substance abuse treatment admissions, it does not include admissions to all programs nationwide. There is no consistent guideline for reporting from programs such as hospital-based treatment programs or correctional programs.
 
@@ -46,7 +68,7 @@ With limitations around the dataset in mind, we were then able to look more clos
 
 One area of note was in how each of these variables was represented within the dataset. As part of their cleaning process, SAMHDA encodes each variable to numeric categories, even in the case of potentially continuous variables like age, as part of their binning to deidentify any minimum or maximum values that might otherwise allow for possible identification. Missing values for each record were all coded to the value of -9 for easy identification. Variable frequencies were reported in the codebook for the entire dataset, but this is where the differences between states in reporting started to present itself as a potential issue in analysis.
 
-## Data Exploration
+## 2.2. Data Exploration
 
 Given the potential issues of data reported on a state-by-state basis, one of our first approaches was to break down potential variables of interest on a state level across the dataset. Our first approach was to plot the breakdowns of some variable categories across all available states. Given that we were exploring the data with the intention of identifying useful outcome variables for later modeling, one variable of note was that of a patient’s reason for discharge from that particular instance of treatment. This discharge variable could include successful completion, patient drop out, facility termination of care, transfer to another program, incarceration, death, or a general ‘Other’ category.
 
@@ -75,8 +97,11 @@ Apart from differences across the states, we also wanted to plot relationships a
 For a little more focused examination of some variables of interest, we also wanted to look at the potential patterns related to patient age, gender, and primary substance.
 
 <img src="assets/violin2019.svg">
+
 <img src="assets/violin2018.svg">
+
 <img src="assets/violin2017.svg">
+
 <img src="assets/violin2016.svg">
 
 While many of the substances tend to stay towards the middle of the overall population, we can see that marijuana use tends to skew younger, while barbiturate use skews much older. More subtle differences by gender also appear across each substance.

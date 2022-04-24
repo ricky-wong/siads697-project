@@ -1,5 +1,6 @@
-# Team Recovery
-
+Predicting Substance Abuse Treatment Outcomes
+==============
+**Team Recovery** (`chiwang-nkdunbar-rckywong-stevenzw`)<br>
 Francis Ng `<chiwang@umich.edu>`<br>
 Nicholas Dunbar `<nkdunbar@umich.edu>`<br>
 Ricky Wong `<rckywong@umich.edu>`<br>
@@ -12,7 +13,7 @@ Winter 2022
 
 # Key links
 - [Project home](https://ricky-wong.github.io/siads697-project)
-- **[Project report](https://ricky-wong.github.io/siads697-project/report)**
+- **[Full report](https://ricky-wong.github.io/siads697-project/report)**
 - [GitHub repository](https://github.com/ricky-wong/siads697-project)
 
 # About this repository
@@ -34,12 +35,11 @@ Do not rely on GitHub's `.ipynb` renderer, since it will not render all types of
 Convenience functions used among multiple notebooks to do multiple things. Includes the installation of `requirements.txt` packages.
 
 ## <a href="https://ricky-wong.github.io/siads697-project/report">`report/`</a>
-Our detailed findings in a write-up.
+Our detailed findings in a write-up, intended to be generated and served off of GitHub Pages.
 
-Report originally written in `Report.md`, then compiled to `index.html` to get served automatically at `/report`.
+Unfortunately, the limitations of (GitHub) Markdown and our interactive needs do not allow us to simply render Markdown for our entire report, so we wrote the report in `Report.md` and compiled it to `index.html` to get served automatically at `/report`. We also manually substitute some generated code-blocks from various sources (listed below) into `index.html`, delimited by comments.
 
 The report consists of various SVGs generated from the notebooks, using different methods:
-
 | Asset                                | Source                                | Method                              |
 | ------------------------------------ | ------------------------------------- | ----------------------------------- |
 | `completion-rates.html`              | `ExploratoryDataAnalysis.ipynb`       | `altair.save()` with `altair-saver` |
@@ -49,6 +49,8 @@ The report consists of various SVGs generated from the notebooks, using differen
 | `violin2017.svg`                     | `Visual_Testing.ipynb`                | `pyplot.savefig()`                  |
 | `violin2018.svg`                     | `Visual_Testing.ipynb`                | `pyplot.savefig()`                  |
 | `violin2019.svg`                     | `Visual_Testing.ipynb`                | `pyplot.savefig()`                  |
+
+The table of contents and enumeration is generated using [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one), which supports the `<!-- omit in toc -->` syntax for ignoring enumeration/TOC for some headers.
 
 # Tested environments
 - Coursera's [Milestone 2 (SIADS 694-695) (Jupyter) notebook environment](https://www.coursera.org/learn/siads-694695/ungradedLab/RLLhW/notebook-environment)
