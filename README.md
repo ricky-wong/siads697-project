@@ -1,20 +1,19 @@
-# Key links
-- [Project home](https://ricky-wong.github.io/siads697-project)
-- **[Project report](https://ricky-wong.github.io/siads697-project/report)**
-- [GitHub repository](https://github.com/ricky-wong/siads697-project)
+# Team Recovery
 
-# Authors
-
-**Team Recovery**<br>
 Francis Ng `<chiwang@umich.edu>`<br>
 Nicholas Dunbar `<nkdunbar@umich.edu>`<br>
 Ricky Wong `<rckywong@umich.edu>`<br>
 Steven Wang `<stevenzw@umich.edu>`
 
-University of Michigan<br>
-Master of Applied Data Science<br>
-SIADS 697 (Capstone)<br>
+University of Michigan School of Information (UMSI)<br>
+Master of Applied Data Science (MADS)<br>
+SIADS 697 - Capstone<br>
 Winter 2022
+
+# Key links
+- [Project home](https://ricky-wong.github.io/siads697-project)
+- **[Project report](https://ricky-wong.github.io/siads697-project/report)**
+- [GitHub repository](https://github.com/ricky-wong/siads697-project)
 
 # About this repository
 This repository contains work related to render this `README` and our project report, as well as all relevant notebooks, datasets, and utilities.
@@ -36,6 +35,19 @@ Convenience functions used among multiple notebooks to do multiple things. Inclu
 
 ## <a href="https://ricky-wong.github.io/siads697-project/report">`report/`</a>
 Our detailed findings in a write-up.
+
+Report originally written in `Report.md`, then compiled to `index.html` to get served automatically at `/report`.
+
+The report consists of various SVGs generated from the notebooks, using different methods:
+| Asset                                | Source                                | Method                              |
+| ------------------------------------ | ------------------------------------- | ----------------------------------- |
+| `completion-rates.html`              | `ExploratoryDataAnalysis.ipynb`       | `altair.save()` with `altair-saver` |
+| `substance-rates.html`               | `Visual_Testing.ipynb`                | `altair.save()` with `altair-saver` |
+| `most-common-primary-substance.html` | `Visual_Testing.ipynb`                | `altair.save()` with `altair-saver` |
+| `violin2016.svg`                     | `Visual_Testing.ipynb`                | `pyplot.savefig()`                  |
+| `violin2017.svg`                     | `Visual_Testing.ipynb`                | `pyplot.savefig()`                  |
+| `violin2018.svg`                     | `Visual_Testing.ipynb`                | `pyplot.savefig()`                  |
+| `violin2019.svg`                     | `Visual_Testing.ipynb`                | `pyplot.savefig()`                  |
 
 # Tested environments
 - Coursera's [Milestone 2 (SIADS 694-695) (Jupyter) notebook environment](https://www.coursera.org/learn/siads-694695/ungradedLab/RLLhW/notebook-environment)

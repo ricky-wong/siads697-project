@@ -50,18 +50,33 @@ One area of note was in how each of these variables was represented within the d
 
 Given the potential issues of data reported on a state-by-state basis, one of our first approaches was to break down potential variables of interest on a state level across the dataset. Our first approach was to plot the breakdowns of some variable categories across all available states. Given that we were exploring the data with the intention of identifying useful outcome variables for later modeling, one variable of note was that of a patient’s reason for discharge from that particular instance of treatment. This discharge variable could include successful completion, patient drop out, facility termination of care, transfer to another program, incarceration, death, or a general ‘Other’ category.
 
-<img src="../assets/completion-rates.svg">
+<!-- Begin import from '../assets/completion-rates.html' -->
+
+<!-- End import from '../assets/completion-rates.html' -->
 
 Looking at the discharge reason variable from this perspective was helpful in highlighting something we suspected from the start: different states were potentially reporting data in an inconsistent manner. Overall, 42.1% of cases in the TEDS-D set were reported as successful completion. Some states reported rates of treatment completion much higher than would be expected from substance abuse programs, while others reported successful completion in less than 20% of their cases. Other states appeared to have almost no dropouts, replaced by facility terminations or transfers instead.
 
 A similar approach was used to examine the breakdown of patients’ primary substance of choice when entering treatment.
 
-<img src="../assets/substance-rates.svg">
+<!-- Begin import from '../assets/substance-rates.html' -->
+
+<!-- End import from '../assets/substance-rates.html' -->
 
 Even with the wide range of substances, we can see that the most common issues across each state typically involved alcohol, heroin, or methamphetamines. If we were to instead plot the most common substance across each state, some regional patterns emerge as well:
 
-<iframe src="../assets/most-common-primary-substance-static.svg">
+<!-- Begin import from '../assets/most-common-primary-substance.html' -->
+
+<!-- End import from '../assets/most-common-primary-substance.html' -->
 
 When we see the data from a geographical perspective, we can see areas most affected by heroin or methamphetamine, with alcohol being the most reported problem across the rest of the country. Another data issue comes up too for the states where the most commonly reported primary substance is missing, when that data should be a cornerstone of treatment planning for many programs.
 
 Apart from differences across the states, we also wanted to plot relationships and distribution of other potential variables of interest more generally. One option for looking at relationships across a majority of the dataset was to utilize a dendrogram and heatmap through the use of Seaborn’s clustermap(). Some identifiable clusters and relationships became apparent through this plot:
+
+For a little more focused examination of some variables of interest, we also wanted to look at the potential patterns related to patient age, gender, and primary substance.
+
+<img src="assets/violin2019.svg">
+<img src="assets/violin2018.svg">
+<img src="assets/violin2017.svg">
+<img src="assets/violin2016.svg">
+
+While many of the substances tend to stay towards the middle of the overall population, we can see that marijuana use tends to skew younger, while barbiturate use skews much older. More subtle differences by gender also appear across each substance.
