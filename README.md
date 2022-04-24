@@ -39,6 +39,7 @@ Our detailed findings in a write-up.
 Report originally written in `Report.md`, then compiled to `index.html` to get served automatically at `/report`.
 
 The report consists of various SVGs generated from the notebooks, using different methods:
+
 | Asset                                | Source                                | Method                              |
 | ------------------------------------ | ------------------------------------- | ----------------------------------- |
 | `completion-rates.html`              | `ExploratoryDataAnalysis.ipynb`       | `altair.save()` with `altair-saver` |
