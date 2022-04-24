@@ -11,6 +11,11 @@ Master of Applied Data Science (MADS)<br>
 SIADS 697 - Capstone<br>
 Winter 2022
 
+# Key links <!-- omit in toc -->
+- [Project home](https://ricky-wong.github.io/siads697-project)
+- **[Full report](https://ricky-wong.github.io/siads697-project/report)**
+- [GitHub repository](https://github.com/ricky-wong/siads697-project)
+
 # Table of Contents <!-- omit in toc -->
 - [1. Introduction](#1-introduction)
   - [1.1. Background](#11-background)
