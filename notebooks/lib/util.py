@@ -2,7 +2,7 @@ import subprocess
 import sys
 
 # Install all packages
-subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "requirements.txt"])
+subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", "../requirements.txt"])
 
 import pandas as pd
 import plotly.express as px
