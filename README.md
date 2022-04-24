@@ -31,6 +31,8 @@ Notebooks have been saved with completed executions and rendered charts, for eas
 
 Do not rely on GitHub's `.ipynb` renderer, since it will not render all types of outputs.
 
+All notebooks are intended to be able to run start-to-finish, independently, in any order. Dependency installation is done via a library import.
+
 ## `notebooks/lib/`
 Convenience functions used among multiple notebooks to do multiple things. Includes the installation of `requirements.txt` packages.
 

@@ -20,6 +20,7 @@ Winter 2022
 - [2. Methodology](#2-methodology)
   - [2.1. Data Preparation](#21-data-preparation)
   - [2.2. Data Exploration](#22-data-exploration)
+
 # 1. Introduction
 
 ## 1.1. Background
