@@ -25,6 +25,21 @@ Winter 2022
 - [2. Methodology](#2-methodology)
   - [2.1. Data Preparation](#21-data-preparation)
   - [2.2. Data Exploration](#22-data-exploration)
+  - [2.3. Feature Selection for Modeling](#23-feature-selection-for-modeling)
+  - [2.4. Dimensionality Reduction and Clustering](#24-dimensionality-reduction-and-clustering)
+  - [2.5. Statistical Analysis](#25-statistical-analysis)
+  - [2.6. Supervised Models for Prediction](#26-supervised-models-for-prediction)
+- [3. Discussion and Results](#3-discussion-and-results)
+  - [3.1. Statistical Results](#31-statistical-results)
+  - [3.2. Model scoring and analysis](#32-model-scoring-and-analysis)
+    - [3.2.1. Model testing against prior years of TEDS-D?](#321-model-testing-against-prior-years-of-teds-d)
+  - [3.3. Failure analysis and Limitations](#33-failure-analysis-and-limitations)
+- [4. Conclusions](#4-conclusions)
+  - [4.1. Summary of process and results](#41-summary-of-process-and-results)
+  - [4.2. Possible future analyses](#42-possible-future-analyses)
+  - [4.3. Ideal goals for future TEDS-D datasets](#43-ideal-goals-for-future-teds-d-datasets)
+  - [4.4. Statements of work](#44-statements-of-work)
+  - [4.5. Bibliography](#45-bibliography)
 
 # 1. Introduction
 
@@ -111,3 +126,61 @@ For a little more focused examination of some variables of interest, we also wan
 <img src="assets/violin2016.svg">
 
 While many of the substances tend to stay towards the middle of the overall population, we can see that marijuana use tends to skew younger, while barbiturate use skews much older. More subtle differences by gender also appear across each substance.
+
+## 2.3. Feature Selection for Modeling 
+
+## 2.4. Dimensionality Reduction and Clustering
+
+## 2.5. Statistical Analysis
+
+## 2.6. Supervised Models for Prediction
+
+# 3. Discussion and Results
+
+## 3.1. Statistical Results
+
+## 3.2. Model scoring and analysis
+
+### 3.2.1. Model testing against prior years of TEDS-D?
+
+## 3.3. Failure analysis and Limitations
+
+# 4. Conclusions
+
+## 4.1. Summary of process and results
+- Original scope of utilizing all of TEDS-D changed as exploration occurred
+- Still able to identify useful information/patterns
+- Clustering 
+
+## 4.2. Possible future analyses
+- Comparison of programs receiving funding (SAMHSA programs) vs. private program efficacy?
+- Specific state-by-state analysis to overcome differences in reporting/record keeping
+
+## 4.3. Ideal goals for future TEDS-D datasets
+- More stringent submission guidelines to prevent large missing categories
+- Specific guidelines as to what constitutes a certain type of treatment or type of discharge
+
+## 4.4. Statements of work
+- Francis:
+- Nick:
+- Ricky:
+- Steven:
+
+## 4.5. Bibliography
+Askari, M. S., Martins, S. S., & Mauro, P. M. (2020). Medication for opioid use disorder treatment and specialty outpatient substance use treatment outcomes: Differences in retention and completion among opioid-related discharges in 2016. *Journal of Substance Abuse Treatment, 114*, 108028. https://doi.org/10.1016/j.jsat.2020.108028
+
+Barenholtz, E., Fitzgerald, N. D., & Hahn, W. E. (2020). Machine-learning approaches to substance-abuse research: Emerging trends and their implications. Current Opinion in Psychiatry, 33(4), 334–342. https://doi.org/10.1097/yco.0000000000000611
+
+Friesen, E. L., & Kurdyak, P. (2020). The impact of psychiatric comorbidity on treatment discontinuation among individuals receiving medications for opioid use disorder. *Drug and Alcohol Dependence*, 216, 108244. https://doi.org/10.1016/j.drugalcdep.2020.108244
+
+(2021). *National Drug Control Budget FY 2022 Funding Highlights*.
+
+Substance Abuse and Mental Health Services Administration, Treatment Episode Data Set (TEDS) Discharges, 2019. Rockville, MD: Substance Abuse and Mental Health Services Administration, 2021.
+
+Stahler, G. J., & Mennis, J. (2018). Treatment outcome disparities for opioid users: Are there racial and ethnic differences in treatment completion across large US metropolitan areas? *Drug and Alcohol Dependence, 190*, 170–178. https://doi.org/10.1016/j.drugalcdep.2018.06.006
+
+Stahler, G. J., Mennis, J., & Baron, D. A. (2021). Racial/ethnic disparities in the use of medications for opioid use disorder (MOUD) and their effects on residential drug treatment outcomes in the US. *Drug and Alcohol Dependence, 226*, 108849. https://doi.org/10.1016/j.drugalcdep.2021.108849
+
+*Substance abuse and addiction statistics [2022]*. NCDAS. (2022, April 6). Retrieved April 24, 2022, from https://drugabusestatistics.org/
+
+Suntai, Z. D., Lee, L. H., & Leeper, J. D. (2020). Racial disparities in substance use treatment completion among older adults. *Innovation in Aging, 4*(6). https://doi.org/10.1093/geroni/igaa051 
