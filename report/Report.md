@@ -32,7 +32,6 @@ Winter 2022
 - [3. Discussion and Results](#3-discussion-and-results)
   - [3.1. Statistical Results](#31-statistical-results)
   - [3.2. Model scoring and analysis](#32-model-scoring-and-analysis)
-    - [3.2.1. Model testing against prior years of TEDS-D?](#321-model-testing-against-prior-years-of-teds-d)
   - [3.3. Failure analysis and Limitations](#33-failure-analysis-and-limitations)
 - [4. Conclusions](#4-conclusions)
   - [4.1. Summary of process and results](#41-summary-of-process-and-results)
@@ -129,6 +128,8 @@ While many of the substances tend to stay towards the middle of the overall popu
 
 ## 2.3. Feature Selection for Modeling 
 
+<img src="assets/diff-in-diff.svg">
+
 ## 2.4. Dimensionality Reduction and Clustering
 
 ## 2.5. Statistical Analysis
@@ -140,8 +141,6 @@ While many of the substances tend to stay towards the middle of the overall popu
 ## 3.1. Statistical Results
 
 ## 3.2. Model scoring and analysis
-
-### 3.2.1. Model testing against prior years of TEDS-D?
 
 ## 3.3. Failure analysis and Limitations
 
