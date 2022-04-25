@@ -128,6 +128,13 @@ While many of the substances tend to stay towards the middle of the overall popu
 
 ## 2.4. Dimensionality Reduction and Clustering
 
+<img src="assets/cluster-sse-before-pca.svg">
+
+<img src="assets/cluster-sse-after-pca.svg">
+
+<!-- Begin import from '../assets/pca-cluster.html' -->
+<!-- End import from '../assets/pca-cluster.html' -->
+
 ## 2.5. Statistical Analysis
 
 ## 2.6. Supervised Models for Prediction
@@ -135,6 +142,9 @@ While many of the substances tend to stay towards the middle of the overall popu
 # 3. Discussion and Results
 
 ## 3.1. Statistical Results
+
+<!-- Begin import from '../assets/p-t.html' -->
+<!-- End import from '../assets/p-t.html' -->
 
 ## 3.2. Model scoring and analysis
 
