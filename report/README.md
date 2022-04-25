@@ -18,6 +18,7 @@ The report consists of various non-interactive SVGs and interactive HTML snippet
 | `cluster-sse-after-pca.svg`          | `03_States_Clustering_Attempts.ipynb` | `pyplot.savefig()`                  |
 | `pca-cluster.html`                   | `03_States_Clustering_Attempts.ipynb` | `altair.save()` with `altair-saver` |
 | `p-t.html`                           | `01_Diff_in_Diff.ipynb`               | `altair.save()` with `altair-saver` |
+| `roc.svg`                            | `02_Classification.ipynb`             | `pyplot.savefig()`                  |
 
 The table of contents and enumeration is generated using [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one), which supports the `<!-- omit in toc -->` syntax for ignoring enumeration/TOC for some headers.
 

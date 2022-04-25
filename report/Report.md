@@ -139,6 +139,8 @@ While many of the substances tend to stay towards the middle of the overall popu
 
 ## 2.6. Supervised Models for Prediction
 
+<img src="assets/roc.svg">
+
 # 3. Discussion and Results
 
 ## 3.1. Statistical Results
