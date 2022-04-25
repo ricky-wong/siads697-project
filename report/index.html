@@ -3,6 +3,9 @@
 <head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="assets/github-markdown.css">
 <style>
 	.markdown-body {
@@ -185,10 +188,51 @@ There is noticeable variation in the level to which states might coerce a person
 <p>When we see the data from a geographical perspective, we can see areas most affected by heroin or methamphetamine, with alcohol being the most reported problem across the rest of the country. Another data issue comes up too for the states where the most commonly reported primary substance is missing, when that data should be a cornerstone of treatment planning for many programs.</p>
 <p>Apart from differences across the states, we also wanted to plot relationships and distribution of other potential variables of interest more generally. One option for looking at relationships across a majority of the dataset was to utilize a dendrogram and heatmap through the use of Seaborn’s clustermap(). Some identifiable clusters and relationships became apparent through this plot:</p>
 <p>For a little more focused examination of some variables of interest, we also wanted to look at the potential patterns related to patient age, gender, and primary substance.</p>
-<p><img src="assets/violin2019.svg"></p>
-<p><img src="assets/violin2018.svg"></p>
-<p><img src="assets/violin2017.svg"></p>
-<p><img src="assets/violin2016.svg"></p>
+
+<!-- begin carousel snippet -->
+<div class="container">
+  <h2>Carousel Example</h2>  
+  <div id="myCarousel" class="carousel" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="assets/violin2019.svg" alt="2019" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="assets/violin2018.svg" alt="2018" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="assets/violin2017.svg" alt="2017" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="assets/violin2016.svg" alt="2017" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<!-- end carousel snippet -->
+
 <p>While many of the substances tend to stay towards the middle of the overall population, we can see that marijuana use tends to skew younger, while barbiturate use skews much older. More subtle differences by gender also appear across each substance.</p>
 <h2 id="2-3-feature-selection-for-modeling">2.3. Feature Selection for Modeling</h2>
 <p><img src="assets/diff-in-diff.svg"></p>

@@ -116,13 +116,9 @@ Apart from differences across the states, we also wanted to plot relationships a
 
 For a little more focused examination of some variables of interest, we also wanted to look at the potential patterns related to patient age, gender, and primary substance.
 
-<img src="assets/violin2019.svg">
+<!-- begin carousel snippet -->
 
-<img src="assets/violin2018.svg">
-
-<img src="assets/violin2017.svg">
-
-<img src="assets/violin2016.svg">
+<!-- end carousel snippet -->
 
 While many of the substances tend to stay towards the middle of the overall population, we can see that marijuana use tends to skew younger, while barbiturate use skews much older. More subtle differences by gender also appear across each substance.
 
