@@ -52,6 +52,7 @@ The report consists of various SVGs generated from the notebooks, using differen
 | `violin2017.svg`                     | `Visual_Testing.ipynb`                | `pyplot.savefig()`                  |
 | `violin2018.svg`                     | `Visual_Testing.ipynb`                | `pyplot.savefig()`                  |
 | `violin2019.svg`                     | `Visual_Testing.ipynb`                | `pyplot.savefig()`                  |
+| `diff-in-diff.svg`                   | `01_Diff_in_Diff.ipynb`               | `seaborn.clustermap(...).savefig()` |
 
 The table of contents and enumeration is generated using [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one), which supports the `<!-- omit in toc -->` syntax for ignoring enumeration/TOC for some headers.
 
