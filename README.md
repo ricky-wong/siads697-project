@@ -56,6 +56,8 @@ The report consists of various SVGs generated from the notebooks, using differen
 
 The table of contents and enumeration is generated using [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one), which supports the `<!-- omit in toc -->` syntax for ignoring enumeration/TOC for some headers.
 
+We also manually added a carousel to flip between multiple SVGs, representing the different violin plots over the years. This was used to show that there were few differences year-over-year.
+
 # Tested environments
 - Coursera's [Milestone 2 (SIADS 694-695) (Jupyter) notebook environment](https://www.coursera.org/learn/siads-694695/ungradedLab/RLLhW/notebook-environment)
   - 4 CPUs, 16GB RAM, 0 GPUs

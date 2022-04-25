@@ -16,3 +16,5 @@ The report consists of various SVGs generated from the notebooks, using differen
 | `diff-in-diff.svg`                   | `01_Diff_in_Diff.ipynb`               | `seaborn.clustermap(...).savefig()` |
 
 The table of contents and enumeration is generated using [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one), which supports the `<!-- omit in toc -->` syntax for ignoring enumeration/TOC for some headers.
+
+We also manually added a carousel to flip between multiple SVGs, representing the different violin plots over the years. This was used to show that there were few differences year-over-year.
